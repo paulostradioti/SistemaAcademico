@@ -7,7 +7,6 @@ namespace SistemaAcademico
     {
         static void Main(string[] args)
         {
-
             int operacao;
         	SistemaAcademico sistemaAcademico = new SistemaAcademico();
 
@@ -17,14 +16,11 @@ namespace SistemaAcademico
                 switch (operacao)
                 {
                     case Menu.ListarAlunos:
-                        //sistemaAcademico.Alunos.ToList().ForEach(item => Console.WriteLine(item));
                         foreach (var aluno in sistemaAcademico.Alunos)
                         {
                             Console.WriteLine(aluno);
                         }
-
                         break;
-
                     case Menu.EmitirCertificado:
                         sistemaAcademico.EmitirCertificado();
                         break;

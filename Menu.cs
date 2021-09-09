@@ -27,13 +27,14 @@ namespace SistemaAcademico
             int escolha;
             do
             {
+                Console.WriteLine();
                 Console.WriteLine("Digite a opção Desejada:");
                 foreach (var opcao in Opcoes)
                 {
-                    System.Console.WriteLine($"{opcao.Key} - {opcao.Value}");
+                    Console.WriteLine($"{opcao.Key} - {opcao.Value}");
                 }
 
-                Int32.TryParse(Console.ReadLine(), out escolha);
+                int.TryParse(Console.ReadLine(), out escolha);
             } while (!Opcoes.ContainsKey(escolha));
 
             return escolha;

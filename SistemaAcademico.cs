@@ -8,43 +8,18 @@ namespace SistemaAcademico
     {
         const double NotaMinimaAprovacao = 60;
 
-        private List<Aluno> _alunos;
-        public IReadOnlyList<Aluno> Alunos { get => _alunos; }
+        public List<Aluno> Alunos { get; set; }
+        //private List<Aluno> _alunos;
+        //public IReadOnlyList<Aluno> Alunos { get => _alunos; }
         public SistemaAcademico()
         {
             CarregaDadosDeExemplo();
         }
 
-        private void CarregaDadosDeExemplo()
-        {
-            _alunos = new List<Aluno>{
-                new Aluno
-                {
-                    Matricula = "102030",
-                    PrimeiroNome = "Leia",
-                    Sobrenome= "Barbosa"
-                },
-                new Aluno
-                {
-                    Matricula = "102031",
-                    PrimeiroNome = "Joana",
-                    Sobrenome = "Galindo"
-                },
-                new Aluno
-                {
-                    Matricula = "102032",
-                    PrimeiroNome = "Osias",
-                    Sobrenome = "Nascimento"
-                },
-                new Aluno
-                {
-                    Matricula = "102033",
-                    PrimeiroNome = "Kyan",
-                    Sobrenome = "Meireles"
-                }
-            };
-
-        }
+        //public void ListarAlunos()
+        //{
+        //    _alunos.ForEach(Console.WriteLine);
+        //}
 
         public void EmitirCertificado()
         {
@@ -109,6 +84,36 @@ namespace SistemaAcademico
         public void AdicionarAluno(Aluno novoAluno)
         {
             _alunos.Add(novoAluno);
+        }
+        private void CarregaDadosDeExemplo()
+        {
+            _alunos = new List<Aluno>{
+                new Aluno
+                {
+                    Matricula = "102030",
+                    PrimeiroNome = "Leia",
+                    Sobrenome= "Barbosa"
+                },
+                new Aluno
+                {
+                    Matricula = "102031",
+                    PrimeiroNome = "Joana",
+                    Sobrenome = "Galindo"
+                },
+                new Aluno
+                {
+                    Matricula = "102032",
+                    PrimeiroNome = "Osias",
+                    Sobrenome = "Nascimento"
+                },
+                new Aluno
+                {
+                    Matricula = "102033",
+                    PrimeiroNome = "Kyan",
+                    Sobrenome = "Meireles"
+                }
+            };
+
         }
     }
 }
